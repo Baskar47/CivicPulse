@@ -9,6 +9,7 @@ const generateToken = (id) => {
 // @route   POST /api/auth/register
 const registerUser = async (req, res) => {
   try {
+    console.log("REGISTER BODY:", req.body);
     const { name, email, password, phone } = req.body;
 
     if (!name || !email || !password) {
