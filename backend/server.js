@@ -20,9 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Routes
-app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/complaints', require('./routes/complaintRoutes'));
-app.use('/api/admin', require('./routes/adminRoutes'));
+app.use('/auth', require('./routes/authRoutes'));
+app.use('/complaints', require('./routes/complaintRoutes'));
+app.use('/admin', require('./routes/adminRoutes'));
 
 app.get('/', (req, res) => {
   res.json({ message: 'Complaint Management API is running' });
